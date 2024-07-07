@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "Weather App 2",
+    "link": "https://weather-app-2-omega.vercel.app/",
+    "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714112969/assets-integrador/portfolio-assets/weatherapiimg_bzzddt.png",
+    "tools": ["react", "styled-components", "material"],
+    "desc": "Aplicación web del clima hecha con react, utilia el servicio de openweather para consultar el clima actual y el pronostico dentro de un rango especifico. Maneja tambien las entradas del usuario para solicitar la info del clima de la ciudad especificada. Adicional una libreria acompaña la solicitud con el logo de la bandera"
+  },
+  {
+    "id": 2,
+    "name": "Tech-dev e-commerce",
+    "link": "https://tech-dev-commerce.vercel.app/",
+    "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170362/assets-integrador/portfolio-assets/techdevimg_ugca95.png",
+    "tools": [
+      "react",
+      "material",
+      "three-fiber",
+      "mongo",
+      "express",
+      "typescript",
+      "vite",
+      "redux",
+      "styled-components",
+      "node"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Fake-tw ",
+    "link": "https://fake-tw-app.vercel.app/",
+    "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170377/assets-integrador/portfolio-assets/faketwv1_slypfb.png",
+    "tools": [
+      "styled-components",
+      "react",
+      "express",
+      "typescript",
+      "mongo",
+      "node"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Fake-tw 2",
+    "link": "https://fake-tw-app-ts.vercel.app/",
+    "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170378/assets-integrador/portfolio-assets/faketwapp_nba8yj.png",
+    "tools": [
+      "styled-components",
+      "react",
+      "express",
+      "typescript",
+      "mongo",
+      "node"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "PokeApp",
+    "link": "https://pokeapi-inifinite-scroll.vercel.app/",
+    "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170391/assets-integrador/portfolio-assets/pokeapi_sj1bmu.png",
+    "tools": ["js"]
+  },
+  {
+    "id": 6,
+    "name": "Modelo servidor e-commerce",
+    "link": "https://documenter.getpostman.com/view/28688697/2s9YRGypU9",
+    "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170377/assets-integrador/portfolio-assets/ecomerceback_zkwopk.png",
+    "tools": ["typescript", "mongo", "express", "node"]
+  }
+]
