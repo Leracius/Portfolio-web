@@ -14,6 +14,7 @@ export const ProjectContainer = styled.div`
     flex-direction: column;
     height: auto;
     width: 90%;
+    opacity: 1;
     /* border: 2px solid #242424; */
     /* background-color: black; */
     /* border-radius: 20px; */

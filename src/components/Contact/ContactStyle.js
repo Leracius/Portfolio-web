@@ -70,6 +70,7 @@ export const CardLogos = styled.div`
   margin: 10px;
   @media (max-width: 900px) {
     /* margin: ${({ $active }) => ($active ? "0px" : "20px")}; */
+    margin: 0;
   }
 `;
 
@@ -100,11 +101,12 @@ export const FormContainer = styled.div`
     }
   }
   @media (max-width: 900px) {
-    margin-top: 10px;
+    margin: 5px;
     padding: 5px;
     border-radius: 0;
     padding: ${({ $active }) => ($active ? "5px" : "15px")};
-    width: ${({ $active }) => ($active ? "auto" : "100%")};
+    width: 100%;
+    border: 2px solid blue;
     box-shadow: none;
     border: none;
     /* display: flex;
