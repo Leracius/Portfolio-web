@@ -42,6 +42,7 @@ export const CardContent = styled.div`
     margin: 0;
     box-shadow: none;
     border: none;
+    padding: ${({ $active }) => ($active ? "10px" : "0px")};
     /* flex-direction: column; */
     /* width: ${({ $active }) => ($active ? "100vw" : "auto")}; */
   }
@@ -63,7 +64,7 @@ export const CardSection = styled.div`
   display: ${({ $active }) => ($active ? "flex" : "none")};
   transition: all 0.2s ease-in-out;
   @media (max-width: 900px) {
-    /* margin: 20px; */
+    margin: 20px;
   }
 `;
 
@@ -112,6 +113,8 @@ export const FormContainer = styled.div`
     width: 100%;
     box-shadow: none;
     border: none;
+    h2 {
+    }
     /* display: flex;
     justify-content: center;
     flex-direction: column; */

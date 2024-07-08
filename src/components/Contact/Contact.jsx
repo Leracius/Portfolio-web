@@ -53,7 +53,7 @@ const Contact = ({ id }) => {
         </CardLogos>
       </CardContent>
       <FormContainer $active={active}>
-        <h2 onClick={handleCLick}>Deja tu mensaje 📧 </h2>
+        <h2 onClick={handleCLick}>mensaje 📧 </h2>
 
         <CardForm $active={active}>
           <input type="text" placeholder="nombre" />
