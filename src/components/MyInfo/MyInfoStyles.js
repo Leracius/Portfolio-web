@@ -8,7 +8,6 @@ export const Container = styled.div`
   align-items: center;
   @media (max-width: 900px) {
     align-items: center;
-    min-height: 100vh;
     /* margin-top: 20px; */
     /* min-height: 500px; */
   }

@@ -15,7 +15,11 @@ export const ContactContainer = styled.div`
   @media (max-width: 900px) {
     border: 2px solid #242424;
     height: auto;
+    width: 90%;
+    border-radius: 10px;
     margin-top: 40px;
+    margin-bottom: 10px;
+    overflow: hidden;
     background-color: black;
   }
 `;
@@ -34,7 +38,7 @@ export const CardContent = styled.div`
   -webkit-box-shadow: 0px 10px 30px -10px rgba(128, 128, 128, 0.63);
   -moz-box-shadow: 0px 10px 30px -10px rgba(128, 128, 128, 0.63);
   @media (max-width: 900px) {
-    padding: ${({ $active }) => ($active ? "20px" : "5px")};
+    /* padding: ${({ $active }) => ($active ? "20px" : "5px")}; */
     margin: 0;
     box-shadow: none;
     border: none;
@@ -104,9 +108,8 @@ export const FormContainer = styled.div`
     margin: 0;
     padding: 0;
     border-radius: 0;
-    padding: ${({ $active }) => ($active ? "5px" : "15px")};
+    /* padding: ${({ $active }) => ($active ? "5px" : "15px")}; */
     width: 100%;
-    border-bottom: 2px solid blue;
     box-shadow: none;
     border: none;
     /* display: flex;
