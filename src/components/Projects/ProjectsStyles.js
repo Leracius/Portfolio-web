@@ -10,11 +10,21 @@ export const ProjectContainer = styled.div`
   transition: opacity 0.5s ease-in-out;
   z-index: 0;
   opacity: ${({ $visible }) => ($visible ? "1" : "0")};
+  h1 {
+    display: none;
+  }
   @media (max-width: 900px) {
     flex-direction: column;
     height: auto;
     width: 90%;
     opacity: 1;
+    h1 {
+      display: flex;
+      margin: 0;
+      padding: 10px;
+      /* background-color: black;
+      border: 2px solid #242424; */
+    }
     /* border: 2px solid #242424; */
     /* background-color: black; */
     /* border-radius: 20px; */

@@ -16,6 +16,7 @@ function Projects({ id }) {
       // style={{ transform: visible ? "translateX(0)" : "translateX(100%)" }}
       // style={{ opacity: visible ? "1" : "0" }}
     >
+      <h1>MIS PROYECTOS</h1>
       <Carousel>
         {dataProject.map((el) => {
           return <ProjectItem key={el.id} text={el} data={el}></ProjectItem>;
