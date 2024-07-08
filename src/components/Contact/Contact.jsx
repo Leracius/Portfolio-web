@@ -16,7 +16,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { contactLogos } from "../../assets/contactLogos";
 
 const Contact = ({ id }) => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
 
   const handleCLick = () => {
     console.log("funco");
@@ -53,7 +53,7 @@ const Contact = ({ id }) => {
         </CardLogos>
       </CardContent>
       <FormContainer $active={active}>
-        <h2 onClick={handleCLick}>mensaje 📧 </h2>
+        <h2 onClick={handleCLick}>Nuevo mensaje 📧 </h2>
 
         <CardForm $active={active}>
           <input type="text" placeholder="nombre" />

@@ -114,6 +114,7 @@ export const FormContainer = styled.div`
     box-shadow: none;
     border: none;
     h2 {
+      font-size: 20px;
     }
     /* display: flex;
     justify-content: center;
