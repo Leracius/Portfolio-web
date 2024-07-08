@@ -9,7 +9,7 @@ export const Container = styled.div`
   @media (max-width: 900px) {
     align-items: start;
     margin-top: 20px;
-    /* min-height: 500px; */
+    min-height: 500px;
   }
 `;
 
