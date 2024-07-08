@@ -61,11 +61,16 @@ const Carousel = ({ children }) => {
           })}
         </InfoButtonContainer>
         <InfoButtonContainer>
-          <button>
-            repositorio
-            <VscGithub color="black" size={30} />
-          </button>
-          <button>deploy de vercel</button>
+          <a href={dataProject[currentIndex].link[0]} target="blank">
+            <button>
+              repositorio
+              <VscGithub color="black" size={30} />
+            </button>
+          </a>
+
+          <a href={dataProject[currentIndex].link[1]} target="blank">
+            <button>deploy de vercel</button>
+          </a>
         </InfoButtonContainer>
       </CarouselInfo>
     </Container>

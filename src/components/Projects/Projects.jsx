@@ -10,21 +10,13 @@ function Projects({ id }) {
   // console.log(scroll);
 
   return (
-    <ProjectContainer
-      $visible={visible}
-      id={id}
-      // style={{ transform: visible ? "translateX(0)" : "translateX(100%)" }}
-      // style={{ opacity: visible ? "1" : "0" }}
-    >
+    <ProjectContainer $visible={visible} id={id}>
       <h1>MIS PROYECTOS</h1>
       <Carousel>
         {dataProject.map((el) => {
           return <ProjectItem key={el.id} text={el} data={el}></ProjectItem>;
         })}
       </Carousel>
-      {/* {dataProject.map((el) => {
-        return <ProjectItem key={el.id} text={el} data={el}></ProjectItem>;
-      })} */}
     </ProjectContainer>
   );
 }

@@ -2,7 +2,10 @@
   {
     "id": 1,
     "name": "Weather App 2",
-    "link": "https://weather-app-2-omega.vercel.app/",
+    "link": [
+      "https://github.com/Leracius/integrador-js",
+      "https://weather-app-2-omega.vercel.app/"
+    ],
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714112969/assets-integrador/portfolio-assets/weatherapiimg_bzzddt.png",
     "tools": ["react", "material", "vite", "sc"],
     "desc": "Aplicación web del clima hecha con react, utiliza el servicio de openweather para consultar el clima actual y el pronostico dentro de un rango específico. Maneja tambien las entradas del usuario para solicitar la info del clima de la ciudad especificada. Adicional una libreria acompaña la solicitud con el logo de la bandera."
@@ -10,7 +13,10 @@
   {
     "id": 2,
     "name": "Tech-dev e-commerce",
-    "link": "https://tech-dev-commerce.vercel.app/",
+    "link": [
+      "https://github.com/Leracius/techDev-commerce",
+      "https://tech-dev-commerce.vercel.app/"
+    ],
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170362/assets-integrador/portfolio-assets/techdevimg_ugca95.png",
     "tools": [
       "react",
@@ -28,7 +34,10 @@
   {
     "id": 3,
     "name": "Fake-tw ",
-    "link": "https://fake-tw-app.vercel.app/",
+    "link": [
+      "https://github.com/Leracius/fake-tw-app-ts",
+      "https://fake-tw-app.vercel.app/"
+    ],
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170377/assets-integrador/portfolio-assets/faketwv1_slypfb.png",
     "tools": ["sc", "react", "express", "typescript", "mongo", "node"],
     "desc": "Primera versión de una sencilla red social que muestra un feed con posteos enviados por usuarios con acceso al link del sitio web, utiliza styled-components para el apartado visual y redux para el manejo de estados globales y axios para la comunicación con las apis."
@@ -36,7 +45,10 @@
   {
     "id": 4,
     "name": "Fake-tw 2",
-    "link": "https://fake-tw-app-ts.vercel.app/",
+    "link": [
+      "https://github.com/Leracius/fake-tw-app",
+      "https://fake-tw-app-ts.vercel.app/"
+    ],
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170378/assets-integrador/portfolio-assets/faketwapp_nba8yj.png",
     "tools": [
       "sc",
@@ -52,7 +64,10 @@
   {
     "id": 5,
     "name": "PokeApp",
-    "link": "https://pokeapi-inifinite-scroll.vercel.app/",
+    "link": [
+      "https://github.com/Leracius/pokeapi-inifinite-scroll",
+      "https://pokeapi-inifinite-scroll.vercel.app/"
+    ],
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170391/assets-integrador/portfolio-assets/pokeapi_sj1bmu.png",
     "tools": ["js"],
     "desc": "este proyecto de front est hecho en js vanilla hace diferentes peticiones a la api de pokemon para no sobrecargar el sitio con todas las imágenes e información de los pokemon existentes,  asi maximiza el rendimiento y reduce el tiempo de espera. "
@@ -60,7 +75,10 @@
   {
     "id": 6,
     "name": "Modelo servidor e-commerce",
-    "link": "https://documenter.getpostman.com/view/28688697/2s9YRGypU9",
+    "link": [
+      "https://github.com/Leracius/e-commerce-backend",
+      "https://documenter.getpostman.com/view/28688697/2s9YRGypU9"
+    ],
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170377/assets-integrador/portfolio-assets/ecomerceback_zkwopk.png",
     "tools": ["typescript", "mongo", "express", "node"],
     "desc": "Proyecto backend realizado para el front de tech-dev e-commerce, ofrece diferentes microservicios lo que la hace un proyecto robusto y con la capacidad de adaptarse a diferntes proyectos. Los microservicios que ofrece son: *crear un usuario y acceder a información única por cada perfil *posibilidad de registrarse y loguearse con un usuario previamente creado * verificar usuario utilizando una librería para enviar mails de confirmación de correo *obtener las ordenes creadas *obtener la lista de productos actualizada *crear productos (solo admin)."

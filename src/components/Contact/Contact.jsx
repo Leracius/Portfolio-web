@@ -32,7 +32,7 @@ const Contact = ({ id }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.nombre || !formData.correo || !formData.mensaje) {
+    if (!formData.from_name || !formData.to_name || !formData.message) {
       alert("Por favor, completa todos los campos.");
       return;
     }
@@ -84,11 +84,20 @@ const Contact = ({ id }) => {
           </h2>
         </CardSection>
         <CardLogos>
-          <img src={contactLogos[0]} width={40}></img>
-          <img src={contactLogos[1]} width={40}></img>
-          <img src={contactLogos[4]} width={50}></img>
-          <img src={contactLogos[2]} width={40}></img>
-          <img src={contactLogos[3]} width={40}></img>
+          <a href="https://wa.me/543517897659" target="blank">
+            {" "}
+            <img src={contactLogos[0]} width={40}></img>
+          </a>
+          <a href="https://www.linkedin.com/in/axel-quintana/" target="blank">
+            <img src={contactLogos[4]} width={50}></img>
+          </a>
+          <a href="https://github.com/Leracius" target="blank">
+            <img src={contactLogos[2]} width={40}></img>
+          </a>
+          <a href="https://www.instagram.com/axel_quintana07/" target="blank">
+            {" "}
+            <img src={contactLogos[3]} width={40}></img>
+          </a>
         </CardLogos>
       </CardContent>
       <FormContainer $active={active}>
@@ -103,7 +112,7 @@ const Contact = ({ id }) => {
             onChange={handleChange}
           />
           <input
-            type="text"
+            type="email"
             placeholder="correo de contacto"
             value={formData.to_name}
             name="to_name"

@@ -71,6 +71,7 @@ export const CardSection = styled.div`
 export const CardLogos = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   margin: 10px;
   @media (max-width: 900px) {
