@@ -6,7 +6,7 @@ export const ContactContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   text-align: center;
   h1 {
     padding: 5px;
@@ -14,7 +14,7 @@ export const ContactContainer = styled.div`
   }
   @media (max-width: 900px) {
     border: 2px solid #242424;
-    /* height: auto; */
+    height: auto;
     margin-top: 40px;
     background-color: black;
   }
@@ -23,7 +23,7 @@ export const ContactContainer = styled.div`
 export const CardContent = styled.div`
   /* width: 400px;
   min-height: 400px; */
-  /* padding: ${({ $active }) => ($active ? "40px" : "10px")}; */
+  padding: ${({ $active }) => ($active ? "40px" : "10px")};
   transition: all 0.5s ease-in-out;
   overflow: hidden;
   margin: 10px;
@@ -59,9 +59,6 @@ export const CardSection = styled.div`
   display: ${({ $active }) => ($active ? "flex" : "none")};
   transition: all 0.2s ease-in-out;
   @media (max-width: 900px) {
-    display: flex;
-    opacity: 1;
-    margin: 10px;
     /* margin: 20px; */
   }
 `;
@@ -73,7 +70,7 @@ export const CardLogos = styled.div`
   margin: 10px;
   @media (max-width: 900px) {
     /* margin: ${({ $active }) => ($active ? "0px" : "20px")}; */
-    margin: 0;
+    margin-top: 10px;
   }
 `;
 
@@ -104,12 +101,12 @@ export const FormContainer = styled.div`
     }
   }
   @media (max-width: 900px) {
-    margin: 5px;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
     border-radius: 0;
     padding: ${({ $active }) => ($active ? "5px" : "15px")};
     width: 100%;
-    border: 2px solid blue;
+    border-bottom: 2px solid blue;
     box-shadow: none;
     border: none;
     /* display: flex;
