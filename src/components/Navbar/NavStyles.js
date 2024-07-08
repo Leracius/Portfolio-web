@@ -29,8 +29,10 @@ export const ContainerStyled = styled.nav`
     height: auto;
     /* position: sticky; */
     flex-direction: row;
-    position: relative;
-    /* border-bottom: 2px solid #242424; */
+    position: fixed;
+    inset: auto auto 0 auto;
+    background-color: black;
+    border-top: 2px solid #242424;
     /* inset: auto auto 0 auto; */
     width: 100%;
   }

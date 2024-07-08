@@ -14,7 +14,7 @@ export const ContactContainer = styled.div`
   }
   @media (max-width: 900px) {
     border: 2px solid #242424;
-    height: auto;
+    /* height: auto; */
     margin-top: 40px;
     background-color: black;
   }

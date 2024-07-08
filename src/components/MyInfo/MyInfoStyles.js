@@ -2,14 +2,14 @@ import styled, { keyframes, css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   @media (max-width: 900px) {
-    align-items: start;
-    margin-top: 20px;
-    min-height: 500px;
+    align-items: center;
+    /* margin-top: 20px; */
+    /* min-height: 500px; */
   }
 `;
 
