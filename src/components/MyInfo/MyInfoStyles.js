@@ -7,7 +7,9 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   @media (max-width: 900px) {
-    min-height: 500px;
+    align-items: start;
+    margin-top: 20px;
+    /* min-height: 500px; */
   }
 `;
 
@@ -103,6 +105,7 @@ export const CardImg = styled.div`
     @media (max-width: 900px) {
       width: 150px;
       height: 150px;
+      margin-top: 20px;
     }
   }
   div {
