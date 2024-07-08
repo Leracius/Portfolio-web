@@ -5,18 +5,18 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid white; */
   width: 100%;
   height: 100vh;
-  /* background-color: black; */
-  /* box-shadow: 0px 23px 48px -18px rgba(17, 167, 195, 0.63);
-  -webkit-box-shadow: 0px 23px 48px -18px rgba(17, 167, 195, 0.63);
-  -moz-box-shadow: 0px 23px 48px -18px rgba(17, 167, 195, 0.63); */
   text-align: center;
   h1 {
-    /* background-color: #24292e; */
     padding: 5px;
     margin: 0;
+  }
+  @media (max-width: 900px) {
+    border: 2px solid #242424;
+    height: auto;
+    margin-top: 40px;
+    background-color: black;
   }
 `;
 
@@ -34,7 +34,12 @@ export const CardContent = styled.div`
   -webkit-box-shadow: 0px 10px 30px -10px rgba(128, 128, 128, 0.63);
   -moz-box-shadow: 0px 10px 30px -10px rgba(128, 128, 128, 0.63);
   @media (max-width: 900px) {
-    flex-direction: column;
+    padding: ${({ $active }) => ($active ? "20px" : "5px")};
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    /* flex-direction: column; */
+    /* width: ${({ $active }) => ($active ? "100vw" : "auto")}; */
   }
   h2 {
     margin: 0;
@@ -42,18 +47,6 @@ export const CardContent = styled.div`
     display: flex;
     gap: 10px;
     font-weight: 500;
-    /* display: ${({ $active }) => ($active ? "flex" : "none")}; */
-    align-items: center;
-    /* background: rgb(15, 208, 196);
-    background: linear-gradient(
-      107deg,
-      rgba(15, 208, 196, 1) 0%,
-      rgba(175, 0, 255, 1) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; */
-
     gap: 10px;
   }
 `;
@@ -65,6 +58,9 @@ export const CardSection = styled.div`
   opacity: ${({ $active }) => ($active ? "1" : "0")};
   display: ${({ $active }) => ($active ? "flex" : "none")};
   transition: all 0.2s ease-in-out;
+  @media (max-width: 900px) {
+    /* margin: 20px; */
+  }
 `;
 
 export const CardLogos = styled.div`
@@ -72,6 +68,9 @@ export const CardLogos = styled.div`
   justify-content: center;
   gap: 10px;
   margin: 10px;
+  @media (max-width: 900px) {
+    /* margin: ${({ $active }) => ($active ? "0px" : "20px")}; */
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -99,7 +98,21 @@ export const FormContainer = styled.div`
       border: 1px solid red;
       padding: 0;
     }
-    /* display: ${({ $active }) => ($active ? "flex" : "none")}; */
+  }
+  @media (max-width: 900px) {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 0;
+    padding: ${({ $active }) => ($active ? "5px" : "15px")};
+    width: ${({ $active }) => ($active ? "auto" : "100%")};
+    box-shadow: none;
+    border: none;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    /* h2 {
+      font-size: 10px;
+    } */
   }
 `;
 

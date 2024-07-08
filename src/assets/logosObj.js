@@ -10,18 +10,19 @@ import material from "./material.svg";
 import vite from "./vite.svg";
 import mongo from "./mongo.svg";
 
-const logos = [
-  reactLogo,
-  cssLogo,
-  jslogo,
-  nodelogo,
-  sclogo,
-  typeLogo,
-  expressLogo,
-  reduxLogo,
-  material,
-  vite,
-  mongo,
-];
+// Crear un objeto con los nombres de los archivos como claves
+const logosObj = {
+  react: reactLogo,
+  css: cssLogo,
+  js: jslogo,
+  node: nodelogo,
+  sc: sclogo,
+  typescript: typeLogo,
+  express: expressLogo,
+  redux: reduxLogo,
+  material: material,
+  vite: vite,
+  mongo: mongo,
+};
 
-export default logos;
+export default logosObj;

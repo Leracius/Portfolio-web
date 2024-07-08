@@ -4,8 +4,8 @@
     "name": "Weather App 2",
     "link": "https://weather-app-2-omega.vercel.app/",
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714112969/assets-integrador/portfolio-assets/weatherapiimg_bzzddt.png",
-    "tools": ["react", "styled-components", "material"],
-    "desc": "Aplicación web del clima hecha con react, utilia el servicio de openweather para consultar el clima actual y el pronostico dentro de un rango especifico. Maneja tambien las entradas del usuario para solicitar la info del clima de la ciudad especificada. Adicional una libreria acompaña la solicitud con el logo de la bandera"
+    "tools": ["react", "material", "vite", "sc"],
+    "desc": "Aplicación web del clima hecha con react, utiliza el servicio de openweather para consultar el clima actual y el pronostico dentro de un rango específico. Maneja tambien las entradas del usuario para solicitar la info del clima de la ciudad especificada. Adicional una libreria acompaña la solicitud con el logo de la bandera."
   },
   {
     "id": 2,
@@ -15,29 +15,23 @@
     "tools": [
       "react",
       "material",
-      "three-fiber",
       "mongo",
       "express",
       "typescript",
       "vite",
       "redux",
-      "styled-components",
+      "sc",
       "node"
-    ]
+    ],
+    "desc": "Este es un proyecto fullstack, consta de un front y un back separados. El front fue hecho en react y utiliza librerías como material UI, emotion, react-three-fiber, framer motion, react model-viewer-3d, three y styled components para la personallizacion de la UI. También utiliza redux para manejar los estados globles, router para las diferentes rutas, formik para la validación de formularios y axios para la comunicación con las apis."
   },
   {
     "id": 3,
     "name": "Fake-tw ",
     "link": "https://fake-tw-app.vercel.app/",
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170377/assets-integrador/portfolio-assets/faketwv1_slypfb.png",
-    "tools": [
-      "styled-components",
-      "react",
-      "express",
-      "typescript",
-      "mongo",
-      "node"
-    ]
+    "tools": ["sc", "react", "express", "typescript", "mongo", "node"],
+    "desc": "Primera versión de una sencilla red social que muestra un feed con posteos enviados por usuarios con acceso al link del sitio web, utiliza styled-components para el apartado visual y redux para el manejo de estados globales y axios para la comunicación con las apis."
   },
   {
     "id": 4,
@@ -45,26 +39,30 @@
     "link": "https://fake-tw-app-ts.vercel.app/",
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170378/assets-integrador/portfolio-assets/faketwapp_nba8yj.png",
     "tools": [
-      "styled-components",
+      "sc",
       "react",
       "express",
       "typescript",
       "mongo",
-      "node"
-    ]
+      "node",
+      "material"
+    ],
+    "desc": "Esta es la segunda versión de una aplicación web fullstack realizada con material UI. Es una sencilla red social que almacena y devuelve todos los posteos que se envían a la base de datos a través del form, recuperando no solo el contenido si no también el nombre del usuario, la fecha y la hora que se creo dicho posteo. Esta pagina esta hecha con react en vite utilizando typescript en todos los componentes y utiliza redux par manejar los estoados globales."
   },
   {
     "id": 5,
     "name": "PokeApp",
     "link": "https://pokeapi-inifinite-scroll.vercel.app/",
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170391/assets-integrador/portfolio-assets/pokeapi_sj1bmu.png",
-    "tools": ["js"]
+    "tools": ["js"],
+    "desc": "este proyecto de front est hecho en js vanilla hace diferentes peticiones a la api de pokemon para no sobrecargar el sitio con todas las imágenes e información de los pokemon existentes,  asi maximiza el rendimiento y reduce el tiempo de espera. "
   },
   {
     "id": 6,
     "name": "Modelo servidor e-commerce",
     "link": "https://documenter.getpostman.com/view/28688697/2s9YRGypU9",
     "img": "https://res.cloudinary.com/dbo7lbynt/image/upload/v1714170377/assets-integrador/portfolio-assets/ecomerceback_zkwopk.png",
-    "tools": ["typescript", "mongo", "express", "node"]
+    "tools": ["typescript", "mongo", "express", "node"],
+    "desc": "Proyecto backend realizado para el front de tech-dev e-commerce, ofrece diferentes microservicios lo que la hace un proyecto robusto y con la capacidad de adaptarse a diferntes proyectos. Los microservicios que ofrece son: *crear un usuario y acceder a información única por cada perfil *posibilidad de registrarse y loguearse con un usuario previamente creado * verificar usuario utilizando una librería para enviar mails de confirmación de correo *obtener las ordenes creadas *obtener la lista de productos actualizada *crear productos (solo admin)."
   }
 ]

@@ -7,14 +7,18 @@ import {
   CarouselInfo,
   Container,
   ButtonContainer,
+  InfoButtonContainer,
 } from "./CarouselStyles";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
-
+import { VscGithub } from "react-icons/vsc";
+import logosObj from "../../assets/logosObj";
 import dataProject from "../../../projects.json";
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const arrLogos = dataProject[currentIndex].tools;
+  console.log(arrLogos);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -50,6 +54,18 @@ const Carousel = ({ children }) => {
       <CarouselInfo>
         <h2>{dataProject[currentIndex].name}</h2>
         <p>{dataProject[currentIndex].desc}</p>
+        <InfoButtonContainer style={{ marginBottom: "20px" }}>
+          {arrLogos.map((el) => {
+            return <img key={el} src={logosObj[el]} width={50}></img>;
+          })}
+        </InfoButtonContainer>
+        <InfoButtonContainer>
+          <button>
+            repositorio
+            <VscGithub color="black" size={30} />
+          </button>
+          <button>deploy de vercel</button>
+        </InfoButtonContainer>
       </CarouselInfo>
     </Container>
   );
