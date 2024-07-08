@@ -46,6 +46,7 @@ const Carousel = ({ children }) => {
           <CarouselButton onClick={prevSlide}>
             <IoMdArrowRoundBack size={30} />
           </CarouselButton>
+          <h2>{dataProject[currentIndex].name}</h2>
           <CarouselButton onClick={nextSlide}>
             <IoMdArrowRoundForward size={30} />
           </CarouselButton>

@@ -18,7 +18,7 @@ export const CarouselContainer = styled.div`
   justify-content: center;
   @media (max-width: 900px) {
     width: 100%;
-    overflow: visible;
+    overflow: inherit;
     scale: 0.9;
   }
 `;
@@ -35,14 +35,23 @@ export const Slide = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
+  h2 {
+    display: none;
+  }
   @media (max-width: 900px) {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
     background-color: black;
     border: 2px solid #242424;
     border-radius: 10px;
+    h2 {
+      display: flex;
+      font-size: 18px;
+      text-align: center;
+    }
   }
 `;
 
@@ -101,6 +110,7 @@ export const CarouselInfo = styled.div`
     h2 {
       font-size: 20px;
       margin: 0;
+      display: none;
     }
     p {
       text-align: justify;
