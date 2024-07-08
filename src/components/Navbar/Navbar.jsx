@@ -24,10 +24,6 @@ const Navbar = ({ targetId }) => {
     });
   };
 
-  useEffect(() => {
-    scrollToTop();
-  }, []);
-
   const handleButtonClick = (buttonNumber) => {
     setSelectedButton(buttonNumber);
   };
