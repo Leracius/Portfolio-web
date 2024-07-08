@@ -6,7 +6,7 @@ export const ContactContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   h1 {
     padding: 5px;
@@ -23,7 +23,7 @@ export const ContactContainer = styled.div`
 export const CardContent = styled.div`
   /* width: 400px;
   min-height: 400px; */
-  padding: ${({ $active }) => ($active ? "40px" : "10px")};
+  /* padding: ${({ $active }) => ($active ? "40px" : "10px")}; */
   transition: all 0.5s ease-in-out;
   overflow: hidden;
   margin: 10px;
@@ -59,6 +59,9 @@ export const CardSection = styled.div`
   display: ${({ $active }) => ($active ? "flex" : "none")};
   transition: all 0.2s ease-in-out;
   @media (max-width: 900px) {
+    display: flex;
+    opacity: 1;
+    margin: 10px;
     /* margin: 20px; */
   }
 `;

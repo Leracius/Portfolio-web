@@ -27,14 +27,11 @@ export const ContainerStyled = styled.nav`
   transition: transform 0.5s ease-in-out;
   @media (max-width: 900px) {
     height: auto;
-    /* position: sticky; */
-    flex-direction: row;
-    position: fixed;
-    inset: auto auto 0 auto;
+    display: none;
+    /* position: fixed;
     background-color: black;
     border-top: 2px solid #242424;
-    /* inset: auto auto 0 auto; */
-    width: 100%;
+    width: 100%; */
   }
 `;
 
@@ -47,15 +44,25 @@ export const Button = styled.button`
   transition: all 0.2s ease-in-out;
   @media (max-width: 900px) {
     scale: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   p {
     margin: 0;
     font-size: 12px;
     @media (max-width: 900px) {
-      /* display: none; */
+      font-size: 20px;
     }
   }
   &:hover {
     transform: scale(1.3);
   }
+`;
+
+export const MenuButton = styled.button`
+  position: absolute;
+  border: 1px solid magenta;
+  inset: 10px 10px auto auto;
+  z-index: 48;
 `;

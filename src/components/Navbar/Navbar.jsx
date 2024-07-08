@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { ContainerStyled, Button } from "./NavStyles";
+import { ContainerStyled, Button, MenuButton } from "./NavStyles";
 import useScrollHandler from "../../hooks/useScrollHandler";
 import { IoHomeOutline } from "react-icons/io5";
 import { LiaAddressCard } from "react-icons/lia";
@@ -8,7 +8,12 @@ import { MdOutlineContacts } from "react-icons/md";
 
 const Navbar = ({ targetId }) => {
   const [selectedButton, setSelectedButton] = useState(1);
+  const [open, setOpen] = useState(false);
   const { scroll, visible } = useScrollHandler(10000);
+
+  const handler = () => {
+    setOpen(!open);
+  };
 
   const moveTo = (el) => {
     const element = document.getElementById(targetId[el]);
@@ -30,7 +35,8 @@ const Navbar = ({ targetId }) => {
 
   return (
     <ContainerStyled
-      style={{ transform: visible ? "translateX(-400px)" : "none" }}
+      $active={open}
+      // style={{ transform: visible ? "translateX(-400px)" : "none" }}
     >
       <Button
         selected={selectedButton === 1}

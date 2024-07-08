@@ -18,6 +18,10 @@ function MyInfo({ id }) {
   const { scroll, visible } = useScrollHandler(70);
   const [arr, setArr] = useState(array);
 
+  const handleClick = () => {
+    setActive(!active);
+  };
+
   return (
     <Container>
       <CardStyled
