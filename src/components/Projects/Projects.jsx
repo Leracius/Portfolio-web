@@ -11,9 +11,10 @@ function Projects({ id }) {
 
   return (
     <ProjectContainer
+      $visible={visible}
       id={id}
       // style={{ transform: visible ? "translateX(0)" : "translateX(100%)" }}
-      style={{ opacity: visible ? "1" : "0" }}
+      // style={{ opacity: visible ? "1" : "0" }}
     >
       <Carousel>
         {dataProject.map((el) => {

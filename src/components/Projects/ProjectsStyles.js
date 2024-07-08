@@ -9,6 +9,7 @@ export const ProjectContainer = styled.div`
   align-items: center;
   transition: opacity 0.5s ease-in-out;
   z-index: 0;
+  opacity: ${({ $visible }) => ($visible ? "1" : "0")};
   @media (max-width: 900px) {
     flex-direction: column;
     height: auto;

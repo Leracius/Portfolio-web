@@ -2,9 +2,13 @@ import styled, { keyframes, css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 500px;
+  min-height: 100vh;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  @media (max-width: 900px) {
+    min-height: 500px;
+  }
 `;
 
 // export const CardRight = styled.div`
@@ -14,6 +18,7 @@ export const Container = styled.div`
 // `;
 
 export const CardStyled = styled.div`
+  height: 400px;
   margin: 60px;
   display: flex;
   flex-direction: column;
@@ -38,7 +43,7 @@ export const CardStyled = styled.div`
   }
   @media (max-width: 900px) {
     /* width: 90%; */
-    /* min-height: 600px; */
+    height: auto;
     justify-content: center;
     margin: 20px;
     transform: none;
