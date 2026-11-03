@@ -1,7 +1,7 @@
 {
-  "name": "vite-project",
+  "name": "axel-quintana-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "engines": {
     "node": "26.x"
@@ -13,16 +13,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.0.1",
-    "react-router-dom": "^6.24.1",
-    "styled-components": "^6.1.8"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "vite": "^4.2.0"
   }
