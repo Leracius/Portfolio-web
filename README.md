@@ -35,7 +35,7 @@ Es un sitio estático: no requiere una base de datos ni variables de entorno. El
 
 ## Ejecutar localmente
 
-Necesitás Node.js 22.x con npm y Git. La versión está declarada en `package.json` y `.nvmrc` para mantener el entorno local y Vercel alineados.
+Necesitás Node.js 26.x con npm y Git. La versión está declarada en `package.json` y `.nvmrc` para mantener el entorno local y Vercel alineados.
 
 ```bash
 git clone https://github.com/Leracius/Portfolio-web.git
