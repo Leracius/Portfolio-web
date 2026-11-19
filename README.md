@@ -15,7 +15,7 @@ Mi espacio para presentar lo que construyo: aplicaciones web, las tecnologías q
 
 La interfaz tiene un diseño adaptable a escritorio y móvil, navegación por secciones, menú móvil, foco visible para teclado y soporte para la preferencia de movimiento reducido.
 
-## Proyecto destacado
+## Proyectos destacados
 
 ### My Workout App
 
@@ -26,6 +26,16 @@ Aplicación web para registrar entrenamientos de fuerza, crear rutinas y consult
 **Tecnologías del proyecto:** Next.js · React · TypeScript · Tailwind CSS · PWA
 
 [Probar My Workout App](https://mygymapp-chi.vercel.app/) · [Ver repositorio](https://github.com/Leracius/GYM-APP)
+
+### Mi Kiosco
+
+Aplicación de consulta de precios y administración de productos con búsqueda, filtros y escaneo de códigos EAN-13, EAN-8 y UPC-A. El catálogo se almacena en PostgreSQL mediante Supabase; la administración requiere Supabase Auth y permisos controlados por RLS.
+
+![Catálogo de Mi Kiosco](public/mi-kiosco.png)
+
+**Tecnologías:** React · TypeScript · Vite · CSS · Supabase · PostgreSQL · Supabase Auth · RLS · ZXing · PWA · Service Worker · Web App Manifest · Inter (Fontsource) · Node.js Test Runner · Oxlint · Vercel.
+
+[Probar Mi Kiosco](https://mi-kiosco-nine.vercel.app/) · [Ver repositorio](https://github.com/Leracius/mi-kiosco)
 
 ## Tecnologías del portfolio
 
@@ -46,11 +56,11 @@ npm run dev
 
 Abrí la dirección local que indique Vite en la terminal.
 
-| Comando | Función |
-| --- | --- |
-| `npm run dev` | Inicia el servidor de desarrollo. |
-| `npm start` | Alternativa al servidor de desarrollo. |
-| `npm run build` | Genera la versión de producción en `dist/`. |
+| Comando           | Función                                                  |
+| ----------------- | -------------------------------------------------------- |
+| `npm run dev`     | Inicia el servidor de desarrollo.                        |
+| `npm start`       | Alternativa al servidor de desarrollo.                   |
+| `npm run build`   | Genera la versión de producción en `dist/`.              |
 | `npm run preview` | Permite revisar localmente la compilación de producción. |
 
 Para revisar la versión de producción:

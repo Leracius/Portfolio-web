@@ -24,5 +24,48 @@
         "description": "Bibliotecas de wger y GymFit mediante rutas API de Next.js y una PWA pensada para el acceso desde el móvil."
       }
     ]
+  },
+  {
+    "id": "mi-kiosco",
+    "name": "Mi Kiosco",
+    "category": "Gestión de productos · PWA",
+    "link": [
+      "https://github.com/Leracius/mi-kiosco",
+      "https://mi-kiosco-nine.vercel.app/"
+    ],
+    "img": "/mi-kiosco.png",
+    "tools": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "CSS",
+      "Supabase",
+      "PostgreSQL",
+      "Supabase Auth",
+      "RLS",
+      "ZXing",
+      "PWA",
+      "Service Worker",
+      "Web App Manifest",
+      "Inter (Fontsource)",
+      "Node.js Test Runner",
+      "Oxlint",
+      "Vercel"
+    ],
+    "desc": "Una aplicación para consultar precios y administrar el catálogo de un kiosco. Permite buscar por nombre o código de barras, escanear productos con la cámara y gestionar artículos desde un acceso administrador.",
+    "details": [
+      {
+        "title": "Consulta rápida de precios",
+        "description": "Catálogo con búsqueda normalizada, filtros por categoría y precios en pesos argentinos. El escáner con ZXing reconoce EAN-13, EAN-8 y UPC-A, con entrada manual como alternativa."
+      },
+      {
+        "title": "Administración y persistencia",
+        "description": "Productos almacenados en PostgreSQL mediante Supabase. Autenticación por correo y contraseña y políticas RLS para limitar el alta, la edición y la eliminación a administradores autorizados."
+      },
+      {
+        "title": "Instalación y calidad de código",
+        "description": "PWA con manifest y Service Worker, interfaz adaptable a móvil y escritorio y tipografía Inter. Verificación de tipos con TypeScript, análisis con Oxlint y pruebas con el ejecutor de Node.js. Publicada en Vercel."
+      }
+    ]
   }
 ]

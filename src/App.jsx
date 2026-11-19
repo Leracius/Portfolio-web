@@ -204,13 +204,7 @@ export default function App() {
                 <br /> desde la idea hasta la aplicación.
               </p>
             </div>
-            <div
-              className={
-                projects.length === 1
-                  ? "project-grid single-project"
-                  : "project-grid"
-              }
-            >
+            <div className="project-grid featured-projects">
               {projects.map((p, i) => (
                 <ProjectCard key={p.id} project={p} index={i} />
               ))}
