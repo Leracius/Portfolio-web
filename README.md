@@ -35,7 +35,7 @@ Aplicación de consulta de precios y administración de productos con búsqueda,
 
 **Tecnologías:** React · TypeScript · Vite · CSS · Supabase · PostgreSQL · Supabase Auth · RLS · ZXing · PWA · Service Worker · Web App Manifest · Inter (Fontsource) · Node.js Test Runner · Oxlint · Vercel.
 
-[Probar Mi Kiosco](https://mi-kiosco-nine.vercel.app/) · [Ver repositorio](https://github.com/Leracius/mi-kiosco)
+[Probar Mi Kiosco](https://mi-kiosco-nine.vercel.app/) · [Ver repositorio](https://github.com/Leracius/mi-kiosco) · [Ver diseño en Figma](https://www.figma.com/design/iwsSx3XchUbCuJBBrCzjOZ/mi-kiosco)
 
 ## Tecnologías del portfolio
 

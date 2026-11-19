@@ -228,6 +228,7 @@ h2 {
 }
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 23px;
   margin-top: 22px;
   font-size: 12px;

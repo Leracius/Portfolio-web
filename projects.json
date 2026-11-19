@@ -28,6 +28,7 @@
   {
     "id": "mi-kiosco",
     "name": "Mi Kiosco",
+    "figmaUrl": "https://www.figma.com/design/iwsSx3XchUbCuJBBrCzjOZ/mi-kiosco",
     "category": "Gestión de productos · PWA",
     "link": [
       "https://github.com/Leracius/mi-kiosco",
@@ -54,6 +55,10 @@
     ],
     "desc": "Una aplicación para consultar precios y administrar el catálogo de un kiosco. Permite buscar por nombre o código de barras, escanear productos con la cámara y gestionar artículos desde un acceso administrador.",
     "details": [
+      {
+        "title": "Del diseño a la aplicación",
+        "description": "Implementación a partir de un mockup de Figma: pantallas móviles para escanear, consultar y administrar productos, con una vista de escritorio que reúne catálogo, escáner y edición de precios."
+      },
       {
         "title": "Consulta rápida de precios",
         "description": "Catálogo con búsqueda normalizada, filtros por categoría y precios en pesos argentinos. El escáner con ZXing reconoce EAN-13, EAN-8 y UPC-A, con entrada manual como alternativa."

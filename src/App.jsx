@@ -52,6 +52,11 @@ function ProjectCard({ project, index }) {
           <a href={project.link[0]} target="_blank" rel="noopener noreferrer">
             Código <Arrow />
           </a>
+          {project.figmaUrl && (
+            <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+              Ver diseño en Figma
+            </a>
+          )}
         </div>
         <div className="project-details">
           {project.details?.map((detail) => (
