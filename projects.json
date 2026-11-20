@@ -102,5 +102,47 @@
         "description": "Separé la consulta pública de la administración. Supabase Auth identifica al usuario y las políticas RLS de PostgreSQL restringen las escrituras a administradores."
       }
     ]
+  },
+  {
+    "id": "glb-viewer-pro",
+    "name": "GLB Viewer Pro",
+    "category": "Visualización 3D · WebGL",
+    "link": [
+      "https://github.com/Leracius/GLB-viewer",
+      "https://glb-viewer-wheat.vercel.app/"
+    ],
+    "img": "/glb-viewer-pro.png",
+    "tools": [
+      "Three.js",
+      "React Three Fiber",
+      "React",
+      "TypeScript",
+      "Drei",
+      "Tailwind CSS",
+      "Vite",
+      "WebGL",
+      "React Router",
+      "Lucide React",
+      "React Compiler",
+      "Babel",
+      "ESLint",
+      "Vercel"
+    ],
+    "desc": "Un estudio 3D en el navegador para explorar modelos GLB y glTF, inspeccionar su geometría y probar iluminación, cámara y animaciones.",
+    "visualCaption": "GLB Viewer Pro · Visor e inspector 3D",
+    "caseStudy": [
+      {
+        "title": "El problema",
+        "description": "Revisar un modelo 3D requiere algo más que verlo: hay que explorar su geometría, sus animaciones y cómo responde a distintos esquemas de luz."
+      },
+      {
+        "title": "Mi implementación",
+        "description": "Construí un visor con Three.js y React Three Fiber: modelos de muestra, carga de archivos por arrastrar y soltar, cámara orbital, wireframe y presets de iluminación. Incluye inspección de mallas, vértices, triángulos y dimensiones, controles de animación y una guía 3D interactiva."
+      },
+      {
+        "title": "Una decisión clave",
+        "description": "Los archivos locales se abren en memoria mediante URLs de objeto, sin subirlos a un servidor. El centrado y el escalado automáticos permiten revisar modelos de distintos tamaños; en móvil, los controles se adaptan a un panel inferior táctil."
+      }
+    ]
   }
 ]

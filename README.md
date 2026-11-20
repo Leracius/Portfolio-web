@@ -37,6 +37,16 @@ Aplicación de consulta de precios y administración de productos con búsqueda,
 
 [Probar Mi Kiosco](https://mi-kiosco-nine.vercel.app/) · [Ver repositorio](https://github.com/Leracius/mi-kiosco) · [Ver diseño en Figma](https://www.figma.com/design/iwsSx3XchUbCuJBBrCzjOZ/mi-kiosco)
 
+### GLB Viewer Pro
+
+Visor e inspector 3D para modelos GLB y glTF. Incluye carga local por arrastrar y soltar, modelos de muestra, cámara orbital, controles de animación, wireframe, presets de iluminación e información técnica de la geometría. Los archivos locales se procesan en memoria, sin subirlos a un servidor.
+
+![GLB Viewer Pro con un modelo 3D](public/glb-viewer-pro.png)
+
+**Tecnologías:** Three.js · React Three Fiber · React · TypeScript · Drei · Tailwind CSS · Vite · WebGL · React Router · Lucide React · React Compiler · Babel · ESLint · Vercel.
+
+[Probar GLB Viewer Pro](https://glb-viewer-wheat.vercel.app/) · [Ver repositorio](https://github.com/Leracius/GLB-viewer)
+
 ## Tecnologías del portfolio
 
 Este repositorio utiliza **React**, **Vite**, **Motion** y **CSS**, con componentes escritos en JavaScript. El contenido de los proyectos está separado en un archivo JSON para facilitar su actualización.
