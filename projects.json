@@ -9,7 +9,7 @@
     ],
     "img": "/my-workout-app.png",
     "tools": ["Next.js", "React", "TypeScript", "Tailwind CSS", "PWA"],
-    "desc": "Una app pensada para llevar el entrenamiento al gimnasio: registrá series, pesos y repeticiones, armá rutinas y consultá tus sesiones desde el calendario.",
+    "desc": "Un registro de entrenamiento que podés llevar al gimnasio: rutinas, series e historial en una misma aplicación.",
     "details": [
       {
         "title": "Entrenamientos a tu medida",
@@ -22,6 +22,21 @@
       {
         "title": "Ejercicios e instalación",
         "description": "Bibliotecas de wger y GymFit mediante rutas API de Next.js y una PWA pensada para el acceso desde el móvil."
+      }
+    ],
+    "visualCaption": "My Workout App · Entrenamiento y rutinas",
+    "caseStudy": [
+      {
+        "title": "El problema",
+        "description": "Anotar ejercicios, pesos y sesiones en lugares separados hace más difícil consultar lo que entrenaste."
+      },
+      {
+        "title": "Mi implementación",
+        "description": "Construí sesiones libres y rutinas reutilizables, registro de series y descansos, y un calendario para consultar y editar el historial."
+      },
+      {
+        "title": "Una decisión clave",
+        "description": "Guardé los entrenamientos en el navegador para empezar sin cuenta y añadí instalación como PWA. El historial queda en ese dispositivo; las bibliotecas de ejercicios consultan APIs externas."
       }
     ]
   },
@@ -53,7 +68,7 @@
       "Oxlint",
       "Vercel"
     ],
-    "desc": "Una aplicación para consultar precios y administrar el catálogo de un kiosco. Permite buscar por nombre o código de barras, escanear productos con la cámara y gestionar artículos desde un acceso administrador.",
+    "desc": "Precios al instante, por nombre o código de barras. Un catálogo público con administración reservada a usuarios autorizados.",
     "details": [
       {
         "title": "Del diseño a la aplicación",
@@ -70,6 +85,21 @@
       {
         "title": "Instalación y calidad de código",
         "description": "PWA con manifest y Service Worker, interfaz adaptable a móvil y escritorio y tipografía Inter. Verificación de tipos con TypeScript, análisis con Oxlint y pruebas con el ejecutor de Node.js. Publicada en Vercel."
+      }
+    ],
+    "visualCaption": "Mi Kiosco · Catálogo y consulta de precios",
+    "caseStudy": [
+      {
+        "title": "El problema",
+        "description": "Consultar precios y mantener un catálogo actualizado necesita una experiencia rápida tanto en el mostrador como en el celular."
+      },
+      {
+        "title": "Mi implementación",
+        "description": "Llevé un mockup de Figma a una app adaptable: búsqueda y filtros, escáner con cámara y formularios para gestionar los productos."
+      },
+      {
+        "title": "Una decisión clave",
+        "description": "Separé la consulta pública de la administración. Supabase Auth identifica al usuario y las políticas RLS de PostgreSQL restringen las escrituras a administradores."
       }
     ]
   }

@@ -9,7 +9,7 @@ Mi espacio para presentar lo que construyo: aplicaciones web, las tecnologías q
 ## Qué vas a encontrar
 
 - **Presentación:** mi perfil y enfoque como desarrollador.
-- **Proyectos:** capturas reales, funcionalidades, tecnologías y enlaces a la aplicación y al código.
+- **Proyectos:** casos breves con problema, implementación y decisiones, capturas con perspectiva al hacer scroll, tecnologías desplegables y enlaces a la aplicación y al código.
 - **Sobre mí:** herramientas con las que trabajo en frontend y backend.
 - **Contacto:** acceso directo a correo, LinkedIn y WhatsApp.
 
@@ -104,6 +104,14 @@ La carpeta `dist/`, generada con `npm run build`, puede alojarse en un servicio 
 
 - **Comando de compilación:** `npm run build`
 - **Directorio de salida:** `dist`
+
+## Interacciones y créditos
+
+Las capturas tienen perspectiva vinculada al scroll y un brillo tenue con el cursor. Los botones principales usan una transición interactiva y contacto tiene un revelado progresivo. Los efectos respetan la preferencia de movimiento reducido.
+
+Mi Kiosco incluye un comparador desplegable entre el archivo de Figma y la implementación. El visor externo se carga solo al abrirlo y conserva los permisos de lectura del archivo en Figma.
+
+Las adaptaciones de Container Scroll Animation (Aceternity UI) e Interactive Hover Button (Magic UI) se documentan en [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). No se agregaron dependencias adicionales para estos efectos.
 
 ## Contacto
 

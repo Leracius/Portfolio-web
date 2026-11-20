@@ -1,59 +1,52 @@
-import { useEffect, useState } from "react";
-import { LazyMotion, MotionConfig, domAnimation } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import {
+  LazyMotion,
+  MotionConfig,
+  domAnimation,
+  m,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import ScrollReveal from "./components/ScrollReveal";
+import ProjectVisual from "./components/ProjectVisual";
+import InteractiveLink from "./components/InteractiveLink";
+import DesignComparison from "./components/DesignComparison";
 import projects from "../projects.json";
 import "./styles/App.css";
 const email = "lucasaxelqg15@gmail.com";
 const github = "https://github.com/Leracius";
 const linkedin = "https://www.linkedin.com/in/axel-quintana/";
 const Arrow = () => <span aria-hidden="true">↗</span>;
-function ProjectCard({ project, index }) {
-  const [failed, setFailed] = useState(false);
+function ProjectCard({ project }) {
   return (
-    <article className="project-card">
-      <ScrollReveal
-        as="a"
-        className="project-image"
-        href={project.link[1]}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`Abrir ${project.name}`}
-      >
-        {failed ? (
-          <span className="image-fallback">{project.name}</span>
-        ) : (
-          <img
-            src={project.img}
-            alt={`Vista de ${project.name}`}
-            loading="lazy"
-            width="1200"
-            height="750"
-            onError={() => setFailed(true)}
-          />
-        )}
-        <span className="image-cta">
-          Explorar proyecto <Arrow />
-        </span>
-      </ScrollReveal>
+    <article className="project-card" aria-labelledby={project.id + "-title"}>
+      <ProjectVisual project={project} />
       <ScrollReveal className="project-copy" delay={0.1}>
         <span className="eyebrow project-category">{project.category}</span>
-        <div className="project-heading">
-          <span className="project-number">0{index + 1}</span>
-          <h3>{project.name}</h3>
-          <Arrow />
-        </div>
+        <h3 id={project.id + "-title"} className="case-title">
+          {project.name}
+        </h3>
         <p>{project.desc}</p>
-        <ul className="tags" aria-label="Tecnologías">
-          {project.tools.map((tool) => (
+        <ul className="tags featured-tags" aria-label="Tecnologías principales">
+          {project.tools.slice(0, 4).map((tool) => (
             <li key={tool}>{tool}</li>
           ))}
         </ul>
+        <div className="case-story">
+          {project.caseStudy.map((item) => (
+            <div key={item.title}>
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
         <div className="project-links">
           <a href={project.link[1]} target="_blank" rel="noopener noreferrer">
-            Ver proyecto <Arrow />
+            Ver proyecto
           </a>
           <a href={project.link[0]} target="_blank" rel="noopener noreferrer">
-            Código <Arrow />
+            Código
           </a>
           {project.figmaUrl && (
             <a
@@ -65,20 +58,30 @@ function ProjectCard({ project, index }) {
             </a>
           )}
         </div>
-        <div className="project-details">
-          {project.details?.map((detail) => (
-            <ScrollReveal key={detail.title} distance={16}>
-              <h4>{detail.title}</h4>
-              <p>{detail.description}</p>
-            </ScrollReveal>
-          ))}
-        </div>
+        <details className="tech-disclosure">
+          <summary>
+            Tecnologías y herramientas <span>{project.tools.length}</span>
+          </summary>
+          <ul className="tags" aria-label="Todas las tecnologías">
+            {project.tools.map((tool) => (
+              <li key={tool}>{tool}</li>
+            ))}
+          </ul>
+        </details>
       </ScrollReveal>
+      {project.figmaUrl && <DesignComparison project={project} />}
     </article>
   );
 }
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const contactRef = useRef(null);
+  const reduceMotion = useReducedMotion();
+  const { scrollYProgress: contactProgress } = useScroll({
+    target: contactRef,
+    offset: ["start end", "start center"],
+  });
+  const contactY = useTransform(contactProgress, [0, 1], [55, 0]);
   const [theme, setTheme] = useState(
     () => document.documentElement.dataset.theme || "light",
   );
@@ -192,9 +195,9 @@ export default function App() {
                 Construyo aplicaciones web conectando interfaces claras con la
                 lógica que las hace posibles. Desde Córdoba, Argentina.
               </p>
-              <a className="button button-dark" href="#proyectos">
-                Explorá mis proyectos <span aria-hidden="true">↓</span>
-              </a>
+              <InteractiveLink className="button-dark" href="#proyectos">
+                Explorá mis proyectos
+              </InteractiveLink>
             </ScrollReveal>
             <div className="hero-footnote">
               <span>INTERFACES + LÓGICA + CURIOSIDAD</span>
@@ -218,8 +221,8 @@ export default function App() {
                 </p>
               </ScrollReveal>
               <div className="project-grid featured-projects">
-                {projects.map((p, i) => (
-                  <ProjectCard key={p.id} project={p} index={i} />
+                {projects.map((p) => (
+                  <ProjectCard key={p.id} project={p} />
                 ))}
               </div>
             </div>
@@ -275,8 +278,15 @@ export default function App() {
               </a>
             </ScrollReveal>
           </section>
-          <section className="contact-section" id="contacto">
-            <ScrollReveal className="wrapper">
+          <section
+            ref={contactRef}
+            className="contact-section contact-reveal"
+            id="contacto"
+          >
+            <m.div
+              className="wrapper contact-content"
+              style={{ y: reduceMotion ? 0 : contactY }}
+            >
               <span className="eyebrow">03 / SIGUIENTE PASO</span>
               <h2>
                 ¿Construimos
@@ -288,14 +298,17 @@ export default function App() {
                   Si tenés un proyecto en mente o querés
                   <br /> conversar sobre una oportunidad, escribime.
                 </p>
-                <a className="button button-green" href={`mailto:${email}`}>
-                  Hablemos por correo <Arrow />
-                </a>
+                <InteractiveLink
+                  className="button-green"
+                  href={`mailto:${email}`}
+                >
+                  Hablemos por correo
+                </InteractiveLink>
               </div>
               <a className="email-link" href={`mailto:${email}`}>
                 {email}
               </a>
-            </ScrollReveal>
+            </m.div>
           </section>
         </main>
         <footer className="wrapper footer">
