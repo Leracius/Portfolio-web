@@ -13,6 +13,7 @@ import ProjectVisual from "./components/ProjectVisual";
 import InteractiveLink from "./components/InteractiveLink";
 import DesignComparison from "./components/DesignComparison";
 import AmbientBackground from "./components/AmbientBackground";
+import HeroBadge from "./components/HeroBadge";
 import projects from "../projects.json";
 import "./styles/App.css";
 const email = "lucasaxelqg15@gmail.com";
@@ -188,6 +189,8 @@ export default function App() {
               paused={backgroundPaused}
             />
             <div className="wrapper hero-content">
+              <div className="hero-layout">
+              <div className="hero-copy">
               <ScrollReveal className="eyebrow" distance={16}>
                 <span className="status-dot" /> AXEL QUINTANA · DESARROLLADOR
                 FULLSTACK
@@ -207,6 +210,9 @@ export default function App() {
                   Explorá mis proyectos
                 </InteractiveLink>
               </ScrollReveal>
+              </div>
+              <HeroBadge />
+              </div>
               <div className="hero-footnote">
                 <span>INTERFACES + LÓGICA + CURIOSIDAD</span>
                 <span>REACT / TYPESCRIPT / NODE.JS</span>

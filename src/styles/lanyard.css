@@ -1,0 +1,40 @@
+@tailwind utilities;
+
+/* Keep the supplied component's utilities and palette inside this hero. */
+#hero-badge {
+  --color-background: transparent;
+  --color-foreground: #eef8ff;
+  --color-card: #101d2c;
+  --color-muted: #24364b;
+  --color-muted-foreground: #b0c6db;
+  --color-border: #3c5269;
+  min-width: 0;
+}
+#hero-badge *, #hero-badge *::before, #hero-badge *::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: var(--paper);
+  --tw-ring-color: var(--focus);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  border-width: 0;
+  border-style: solid;
+}
+#hero-badge [data-slot] { overflow: visible; }
+#hero-badge [data-stage] { margin-top: 0; }
+#hero-badge [data-slot] > div:last-child {
+  color: var(--muted);
+  padding: 12px 0 0;
+}
+#hero-badge [data-slot] > div:last-child p:first-child { font-size: 12px; }
+#hero-badge [data-slot] > div:last-child p + p { font-size: 11px; }
+#hero-badge [data-badge] { background: transparent; }
+#hero-badge [data-face] { border-width: 1px; }
+#hero-badge [data-rail] { inset-inline: 24px; }
