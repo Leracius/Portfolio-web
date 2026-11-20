@@ -7,8 +7,8 @@ export default function AmbientBackground({ containerRef, paused }) {
   const [pageVisible, setPageVisible] = useState(!document.hidden);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const smoothX = useSpring(x, { stiffness: 35, damping: 22 });
-  const smoothY = useSpring(y, { stiffness: 35, damping: 22 });
+  const smoothX = useSpring(x, { stiffness: 80, damping: 20 });
+  const smoothY = useSpring(y, { stiffness: 80, damping: 20 });
   const active = !paused && !reduceMotion && visible && pageVisible;
 
   useEffect(() => {

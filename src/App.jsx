@@ -14,6 +14,7 @@ import InteractiveLink from "./components/InteractiveLink";
 import DesignComparison from "./components/DesignComparison";
 import AmbientBackground from "./components/AmbientBackground";
 import HeroBadge from "./components/HeroBadge";
+import HeroTitle from "./components/HeroTitle";
 import projects from "../projects.json";
 import "./styles/App.css";
 const email = "lucasaxelqg15@gmail.com";
@@ -195,12 +196,7 @@ export default function App() {
                 <span className="status-dot" /> AXEL QUINTANA · DESARROLLADOR
                 FULLSTACK
               </ScrollReveal>
-              <ScrollReveal as="h1" delay={0.08}>
-                De una idea
-                <br />a una experiencia
-                <br />
-                <span>que funciona.</span>
-              </ScrollReveal>
+              <HeroTitle />
               <ScrollReveal className="hero-bottom" delay={0.16}>
                 <p>
                   Construyo aplicaciones web conectando interfaces claras con la

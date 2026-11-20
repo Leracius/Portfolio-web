@@ -92,6 +92,39 @@
 .hero h1 > span {
   color: var(--heading-muted);
 }
+.hero h1 > .hero-type-line {
+  position: relative;
+  display: block;
+  color: var(--ink);
+}
+.hero h1 > .hero-type-accent {
+  color: var(--heading-muted);
+}
+.hero-type-reserved {
+  visibility: hidden;
+}
+.hero-type-written {
+  position: absolute;
+  inset: 0;
+  white-space: pre-wrap;
+}
+.hero-type-cursor {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0.8em;
+}
+.hero-type-cursor::after {
+  position: absolute;
+  inset-block: 0;
+  left: 0.08em;
+  border-left: 2px solid var(--accent);
+  content: '';
+  animation: hero-cursor-blink 0.8s step-end infinite;
+}
+@keyframes hero-cursor-blink {
+  50% { opacity: 0; }
+}
 .hero-bottom {
   display: flex;
   align-items: center;
@@ -1095,7 +1128,7 @@ summary:focus-visible {
   border-radius: 50%;
   filter: blur(65px);
   will-change: transform;
-  animation: ambient-drift 26s ease-in-out infinite alternate;
+  animation: ambient-drift 6s ease-in-out infinite alternate;
 }
 .ambient-cloud-navy {
   left: 15%;
@@ -1106,20 +1139,21 @@ summary:focus-visible {
   right: -8%;
   top: -5%;
   background: radial-gradient(ellipse, #005b96d9 5%, #005b9600 70%);
-  animation-duration: 31s;
-  animation-delay: -9s;
+  animation-duration: 8s;
+  animation-delay: -3s;
+  animation-direction: alternate-reverse;
 }
 .ambient-cloud-cyan {
   right: -15%;
-  bottom: -58%;
+  bottom: -25%;
   background: radial-gradient(
     ellipse,
     #5bc0ded9 8%,
     #a4e2ec66 32%,
     #a4e2ec00 68%
   );
-  animation-duration: 23s;
-  animation-delay: -15s;
+  animation-duration: 7s;
+  animation-delay: -4.5s;
 }
 .ambient-reading-shade {
   position: absolute;
@@ -1152,18 +1186,18 @@ summary:focus-visible {
 }
 @keyframes ambient-drift {
   0% {
-    transform: translate3d(-5%, -4%, 0) scale(0.96) rotate(-6deg);
+    transform: translate3d(-18%, -12%, 0) scale(0.9) rotate(-8deg);
   }
   50% {
-    transform: translate3d(6%, 5%, 0) scale(1.08) rotate(4deg);
+    transform: translate3d(12%, 8%, 0) scale(1.12) rotate(6deg);
   }
   100% {
-    transform: translate3d(-2%, 10%, 0) scale(1.03) rotate(-2deg);
+    transform: translate3d(-8%, 18%, 0) scale(1.04) rotate(-4deg);
   }
 }
 @media (max-width: 700px) {
   .ambient-background {
-    opacity: calc(var(--ambient-opacity) * 0.8);
+    opacity: var(--ambient-opacity);
   }
   .ambient-cloud {
     width: 135%;
@@ -1174,12 +1208,12 @@ summary:focus-visible {
     left: 5%;
   }
   .ambient-cloud-blue {
-    right: -75%;
+    right: -20%;
     top: 6%;
   }
   .ambient-cloud-cyan {
-    right: -50%;
-    bottom: -25%;
+    right: -12%;
+    bottom: -8%;
   }
   .background-toggle {
     font-size: 11px;
