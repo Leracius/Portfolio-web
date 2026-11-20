@@ -13,7 +13,7 @@ Mi espacio para presentar lo que construyo: aplicaciones web, las tecnologías q
 - **Sobre mí:** herramientas con las que trabajo en frontend y backend.
 - **Contacto:** acceso directo a correo, LinkedIn y WhatsApp.
 
-La interfaz tiene un diseño adaptable a escritorio y móvil, navegación por secciones, menú móvil, foco visible para teclado y soporte para la preferencia de movimiento reducido.
+La interfaz tiene un diseño adaptable a escritorio y móvil, navegación por secciones, menú móvil, foco visible para teclado y soporte para la preferencia de movimiento reducido. Las secciones se revelan al hacer scroll con Motion, con entradas suaves que se reproducen una sola vez.
 
 ## Proyectos destacados
 
@@ -39,7 +39,7 @@ Aplicación de consulta de precios y administración de productos con búsqueda,
 
 ## Tecnologías del portfolio
 
-Este repositorio utiliza **React**, **Vite** y **CSS**, con componentes escritos en JavaScript. El contenido de los proyectos está separado en un archivo JSON para facilitar su actualización.
+Este repositorio utiliza **React**, **Vite**, **Motion** y **CSS**, con componentes escritos en JavaScript. El contenido de los proyectos está separado en un archivo JSON para facilitar su actualización.
 
 Es un sitio estático: no requiere una base de datos ni variables de entorno. El contacto por correo abre el cliente de correo del visitante.
 
