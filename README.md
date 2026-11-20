@@ -117,7 +117,7 @@ La carpeta `dist/`, generada con `npm run build`, puede alojarse en un servicio 
 
 ## Interacciones y créditos
 
-Las capturas tienen perspectiva vinculada al scroll y un brillo tenue con el cursor. Los botones principales usan una transición interactiva y contacto tiene un revelado progresivo. Los efectos respetan la preferencia de movimiento reducido.
+La identidad visual utiliza azul marino, azul y cian. La portada incluye un fondo de gradientes suaves que responde al cursor; se puede pausar y se detiene fuera de pantalla o cuando la pestaña no está visible. Las capturas tienen perspectiva vinculada al scroll y un brillo tenue con el cursor. Los botones principales usan una transición interactiva y contacto tiene un revelado progresivo. Los efectos respetan la preferencia de movimiento reducido.
 
 Mi Kiosco incluye un comparador desplegable entre el archivo de Figma y la implementación. El visor externo se carga solo al abrirlo y conserva los permisos de lectura del archivo en Figma.
 

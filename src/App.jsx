@@ -12,6 +12,7 @@ import ScrollReveal from "./components/ScrollReveal";
 import ProjectVisual from "./components/ProjectVisual";
 import InteractiveLink from "./components/InteractiveLink";
 import DesignComparison from "./components/DesignComparison";
+import AmbientBackground from "./components/AmbientBackground";
 import projects from "../projects.json";
 import "./styles/App.css";
 const email = "lucasaxelqg15@gmail.com";
@@ -76,6 +77,8 @@ function ProjectCard({ project }) {
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const contactRef = useRef(null);
+  const heroRef = useRef(null);
+  const [backgroundPaused, setBackgroundPaused] = useState(false);
   const reduceMotion = useReducedMotion();
   const { scrollYProgress: contactProgress } = useScroll({
     target: contactRef,
@@ -89,7 +92,7 @@ export default function App() {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", theme === "dark" ? "#141813" : "#f7f8f2");
+      ?.setAttribute("content", theme === "dark" ? "#0b182b" : "#f2f8fc");
     try {
       localStorage.setItem("portfolio-theme", theme);
     } catch {
@@ -179,29 +182,45 @@ export default function App() {
           </div>
         </header>
         <main id="contenido">
-          <section className="hero wrapper" id="inicio">
-            <ScrollReveal className="eyebrow" distance={16}>
-              <span className="status-dot" /> AXEL QUINTANA · DESARROLLADOR
-              FULLSTACK
-            </ScrollReveal>
-            <ScrollReveal as="h1" delay={0.08}>
-              De una idea
-              <br />a una experiencia
-              <br />
-              <span>que funciona.</span>
-            </ScrollReveal>
-            <ScrollReveal className="hero-bottom" delay={0.16}>
-              <p>
-                Construyo aplicaciones web conectando interfaces claras con la
-                lógica que las hace posibles. Desde Córdoba, Argentina.
-              </p>
-              <InteractiveLink className="button-dark" href="#proyectos">
-                Explorá mis proyectos
-              </InteractiveLink>
-            </ScrollReveal>
-            <div className="hero-footnote">
-              <span>INTERFACES + LÓGICA + CURIOSIDAD</span>
-              <span>REACT / TYPESCRIPT / NODE.JS</span>
+          <section ref={heroRef} className="hero" id="inicio">
+            <AmbientBackground
+              containerRef={heroRef}
+              paused={backgroundPaused}
+            />
+            <div className="wrapper hero-content">
+              <ScrollReveal className="eyebrow" distance={16}>
+                <span className="status-dot" /> AXEL QUINTANA · DESARROLLADOR
+                FULLSTACK
+              </ScrollReveal>
+              <ScrollReveal as="h1" delay={0.08}>
+                De una idea
+                <br />a una experiencia
+                <br />
+                <span>que funciona.</span>
+              </ScrollReveal>
+              <ScrollReveal className="hero-bottom" delay={0.16}>
+                <p>
+                  Construyo aplicaciones web conectando interfaces claras con la
+                  lógica que las hace posibles. Desde Córdoba, Argentina.
+                </p>
+                <InteractiveLink className="button-dark" href="#proyectos">
+                  Explorá mis proyectos
+                </InteractiveLink>
+              </ScrollReveal>
+              <div className="hero-footnote">
+                <span>INTERFACES + LÓGICA + CURIOSIDAD</span>
+                <span>REACT / TYPESCRIPT / NODE.JS</span>
+                {!reduceMotion && (
+                  <button
+                    type="button"
+                    className="background-toggle"
+                    aria-pressed={backgroundPaused}
+                    onClick={() => setBackgroundPaused(!backgroundPaused)}
+                  >
+                    {backgroundPaused ? "Reanudar fondo" : "Pausar fondo"}
+                  </button>
+                )}
+              </div>
             </div>
           </section>
           <section className="projects-section" id="proyectos">
@@ -212,7 +231,7 @@ export default function App() {
                   <h2>
                     Ideas llevadas
                     <br />
-                    al código<span className="green">.</span>
+                    al código<span className="accent-text">.</span>
                   </h2>
                 </div>
                 <p>
@@ -299,7 +318,7 @@ export default function App() {
                   <br /> conversar sobre una oportunidad, escribime.
                 </p>
                 <InteractiveLink
-                  className="button-green"
+                  className="button-accent"
                   href={`mailto:${email}`}
                 >
                   Hablemos por correo

@@ -142,7 +142,7 @@ h2 {
   color: var(--muted);
   padding-bottom: 5px;
 }
-.green {
+.accent-text {
   color: var(--accent);
 }
 .project-grid {
@@ -154,7 +154,7 @@ h2 {
   position: relative;
   display: block;
   aspect-ratio: 1.38;
-  background: #dce2d1;
+  background: #d6e7f4;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -320,12 +320,12 @@ h2 {
   margin-top: 24px;
 }
 .contact-section {
-  background: #20251f;
-  color: #f7f8f2;
+  background: #183352;
+  color: #eef8ff;
   padding: 85px 0 65px;
 }
 .contact-section .eyebrow {
-  color: #a6b59b;
+  color: #a9c9e3;
 }
 .contact-section h2 {
   font-size: clamp(60px, 8vw, 110px);
@@ -335,7 +335,7 @@ h2 {
 }
 .contact-section em {
   font-style: normal;
-  color: var(--green);
+  color: var(--highlight);
 }
 .contact-bottom {
   display: flex;
@@ -344,21 +344,21 @@ h2 {
   gap: 25px;
 }
 .contact-bottom p {
-  color: #b7c0ae;
+  color: #b7cfe4;
   font-size: 15px;
   line-height: 1.8;
 }
-.button-green {
-  background: var(--green);
-  color: #20251f;
+.button-accent {
+  background: var(--highlight);
+  color: #183352;
 }
-.button-green:hover {
-  background: #d4ff80;
+.button-accent:hover {
+  background: #aae9f4;
 }
 .email-link {
   display: inline-block;
   font-size: 13px;
-  border-bottom: 1px solid #728065;
+  border-bottom: 1px solid #648ba9;
   padding-bottom: 6px;
   margin-top: 25px;
   overflow-wrap: anywhere;
@@ -430,7 +430,7 @@ h2 {
     padding: 20px;
     z-index: 5;
     border-radius: 8px;
-    box-shadow: 0 15px 30px #20251f10;
+    box-shadow: 0 15px 30px #18335210;
   }
   .navigation.open {
     display: flex;
@@ -578,7 +578,7 @@ h2 {
 }
 .featured-projects .project-image {
   aspect-ratio: 1.35;
-  background: #151515;
+  background: #0b1628;
 }
 .featured-projects .project-image img {
   object-fit: contain;
@@ -676,7 +676,7 @@ h2 {
   transform: rotate(0) scale(1);
 }
 [data-theme="dark"] .contact-section {
-  background: #10140e;
+  background: #081323;
   border-top: 1px solid var(--line);
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -697,7 +697,7 @@ h2 {
   }
   .hero h1 > span,
   .muted,
-  .green,
+  .accent-text,
   .wordmark span,
   .hero-bottom p,
   .section-top > p,
@@ -770,7 +770,7 @@ h2 {
   pointer-events: none;
   background: radial-gradient(
     240px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
-    #c4f12420,
+    #5bc0de26,
     transparent 80%
   );
   opacity: 0;
@@ -836,8 +836,8 @@ summary:focus-visible {
   border-radius: 3px;
 }
 .interactive-link {
-  --link-fill: var(--green);
-  --link-hover-text: #20251f;
+  --link-fill: var(--highlight);
+  --link-hover-text: #183352;
   position: relative;
   isolation: isolate;
   display: inline-flex;
@@ -856,9 +856,9 @@ summary:focus-visible {
     border-color 0.25s,
     box-shadow 0.25s;
 }
-.interactive-link.button-green {
-  --link-fill: #f7f8f2;
-  --link-hover-text: #20251f;
+.interactive-link.button-accent {
+  --link-fill: #eef8ff;
+  --link-hover-text: #183352;
 }
 .interactive-link-dot {
   height: 7px;
@@ -926,7 +926,7 @@ summary:focus-visible {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 90% 0%, #c4f16912, transparent 60%);
+  background: radial-gradient(ellipse at 90% 0%, #5bc0de18, transparent 60%);
 }
 .contact-content {
   position: relative;
@@ -980,7 +980,7 @@ summary:focus-visible {
   width: 100%;
   height: 350px;
   object-fit: contain;
-  background: #151515;
+  background: #0b1628;
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -1034,5 +1034,131 @@ summary:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .project-visual .project-image::after {
     display: none;
+  }
+}
+/* Blue atmosphere: composited color layers, no canvas or WebGL dependency. */
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.ambient-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--ambient-opacity);
+}
+.ambient-pointer {
+  position: absolute;
+  inset: -12%;
+}
+.ambient-cloud {
+  position: absolute;
+  width: 75%;
+  height: 115%;
+  border-radius: 50%;
+  filter: blur(65px);
+  will-change: transform;
+  animation: ambient-drift 26s ease-in-out infinite alternate;
+}
+.ambient-cloud-navy {
+  left: 15%;
+  top: -30%;
+  background: radial-gradient(ellipse, #1b365d 10%, #1b365d00 72%);
+}
+.ambient-cloud-blue {
+  right: -8%;
+  top: -5%;
+  background: radial-gradient(ellipse, #005b96d9 5%, #005b9600 70%);
+  animation-duration: 31s;
+  animation-delay: -9s;
+}
+.ambient-cloud-cyan {
+  right: -15%;
+  bottom: -58%;
+  background: radial-gradient(
+    ellipse,
+    #5bc0ded9 8%,
+    #a4e2ec66 32%,
+    #a4e2ec00 68%
+  );
+  animation-duration: 23s;
+  animation-delay: -15s;
+}
+.ambient-reading-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--paper) 0%,
+      color-mix(in srgb, var(--paper) 76%, transparent) 32%,
+      transparent 80%
+    ),
+    linear-gradient(0deg, var(--paper), transparent 25%);
+}
+.ambient-background[data-active="false"] .ambient-cloud {
+  animation-play-state: paused;
+}
+.background-toggle {
+  margin-left: auto;
+  padding: 4px 0 4px 14px;
+  min-height: 32px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.hero-footnote {
+  align-items: center;
+}
+@keyframes ambient-drift {
+  0% {
+    transform: translate3d(-5%, -4%, 0) scale(0.96) rotate(-6deg);
+  }
+  50% {
+    transform: translate3d(6%, 5%, 0) scale(1.08) rotate(4deg);
+  }
+  100% {
+    transform: translate3d(-2%, 10%, 0) scale(1.03) rotate(-2deg);
+  }
+}
+@media (max-width: 700px) {
+  .ambient-background {
+    opacity: calc(var(--ambient-opacity) * 0.8);
+  }
+  .ambient-cloud {
+    width: 135%;
+    height: 90%;
+    filter: blur(42px);
+  }
+  .ambient-cloud-navy {
+    left: 5%;
+  }
+  .ambient-cloud-blue {
+    right: -75%;
+    top: 6%;
+  }
+  .ambient-cloud-cyan {
+    right: -50%;
+    bottom: -25%;
+  }
+  .background-toggle {
+    font-size: 11px;
+    min-height: 44px;
+    padding-block: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-cloud {
+    animation: none;
+    will-change: auto;
   }
 }
