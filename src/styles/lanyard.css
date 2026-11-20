@@ -40,6 +40,10 @@
 #hero-badge [data-slot] > div:last-child p + p { font-size: 11px; }
 #hero-badge [data-badge] { background: transparent; }
 #hero-badge [data-face] { border-width: 1px; }
+#hero-badge [data-face="front"] img {
+  transform: scale(1.5);
+  transform-origin: 48% 30%;
+}
 #hero-badge [data-rail] { inset-inline: 24px; }
 
 /* Flow the biography and chips together, leaving the contact area clear. */

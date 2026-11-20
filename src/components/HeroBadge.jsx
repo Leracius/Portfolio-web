@@ -6,7 +6,7 @@ const profile = [{
   name: 'Axel Quintana',
   role: 'Desarrollador Fullstack',
   team: 'Córdoba · Argentina',
-  image: '/axel-monogram.svg',
+  image: '/axel-portrait.png',
   tone: 1,
   drop: 6,
   bio: 'Construyo aplicaciones web conectando interfaces claras con la lógica que las hace posibles.',
