@@ -347,20 +347,20 @@ const BadgeFaces = React.memo(function BadgeFaces({ item, tone }: { item: Lanyar
       <span data-face="back" className="absolute inset-0 overflow-hidden rounded-[0.85em] border border-border bg-card text-card-foreground [backface-visibility:hidden]" style={{ transform: "rotateY(180deg) translateZ(1px)" }}>
         <Band tone={tone} />
         <Hole />
-        <span className="absolute inset-x-[0.85em] top-[2.6em] block">
+        <span data-badge-details>
+        <span className="block">
           <span className="block truncate text-[0.95em] font-semibold leading-tight">{item.name}</span>
           <span className="block truncate text-[0.72em] leading-snug text-muted-foreground">{item.role}</span>
         </span>
         {item.bio && (
-          <span className="absolute inset-x-[0.85em] top-[5.1em] block">
-            <span data-bio className="line-clamp-4 block text-[0.74em] leading-[1.4]">{item.bio}</span>
-          </span>
+          <span data-bio>{item.bio}</span>
         )}
         {tags.length > 0 && (
-          <span className="absolute inset-x-[0.85em] top-[9.8em] flex flex-wrap gap-[0.28em]">
+          <span className="flex flex-wrap gap-[0.28em]">
             {tags.map((tag) => <span key={tag} className="block rounded-full border border-border bg-muted/60 px-[0.6em] py-[0.16em] text-[0.6em] leading-tight text-muted-foreground">{tag}</span>)}
           </span>
         )}
+        </span>
         {links.length > 0 && (
           <span aria-hidden="true" className="absolute bottom-[0.75em] left-[0.6em] flex flex-col items-start gap-[0.1em] transition-opacity duration-150 motion-reduce:transition-none" style={{ opacity: "var(--drawn, 1)" }}>
             {links.map((link) => <span key={link.label} className={LINK_ROW}><LinkIcon label={link.label} />{link.label}</span>)}

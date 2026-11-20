@@ -9,6 +9,9 @@
   --color-muted-foreground: #b0c6db;
   --color-border: #3c5269;
   min-width: 0;
+  /* Keep Safari text inflation from changing the fixed-size badge geometry. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 #hero-badge *, #hero-badge *::before, #hero-badge *::after {
   --tw-translate-x: 0;
@@ -38,3 +41,27 @@
 #hero-badge [data-badge] { background: transparent; }
 #hero-badge [data-face] { border-width: 1px; }
 #hero-badge [data-rail] { inset-inline: 24px; }
+
+/* Flow the biography and chips together, leaving the contact area clear. */
+#hero-badge [data-badge-details] {
+  position: absolute;
+  inset: 2.6em 0.85em 5.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65em;
+  min-height: 0;
+}
+#hero-badge [data-bio] {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  flex-shrink: 1;
+  min-height: 0;
+  font-size: 0.68em;
+  line-height: 1.4;
+}
+#hero-badge [data-badge-details] > :first-child,
+#hero-badge [data-badge-details] > :last-child {
+  flex-shrink: 0;
+}

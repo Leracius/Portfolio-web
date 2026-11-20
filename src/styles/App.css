@@ -492,12 +492,18 @@ h2 {
     min-height: 54px;
   }
   .hero-footnote {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     margin-top: 40px;
     font-size: 9px;
     letter-spacing: 0.7px;
   }
-  .hero-footnote span:last-child {
-    display: none;
+  .hero-footnote .background-toggle {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-left: 0;
+    padding-left: 0;
+    white-space: nowrap;
   }
   .projects-section {
     padding: 55px 0;
