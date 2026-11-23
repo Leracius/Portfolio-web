@@ -226,6 +226,14 @@ h2 {
 .project-image:hover img {
   transform: scale(1.04);
 }
+.project-image-portrait {
+  background: #050817;
+}
+.project-image-portrait img {
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 .image-cta {
   position: absolute;
   bottom: 12px;

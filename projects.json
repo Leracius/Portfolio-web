@@ -144,5 +144,33 @@
         "description": "Los archivos locales se abren en memoria mediante URLs de objeto, sin subirlos a un servidor. El centrado y el escalado automáticos permiten revisar modelos de distintos tamaños; en móvil, los controles se adaptan a un panel inferior táctil."
       }
     ]
+  },
+  {
+    "id": "marvel-comics",
+    "name": "Marvel Comics Explorer",
+    "category": "Catálogo de cómics · API REST",
+    "link": [
+      "https://github.com/Leracius/marvel-comics",
+      "https://astounding-faloodeh-adf338.netlify.app/"
+    ],
+    "img": "/marvel-comics.jpg",
+    "previewFormat": "portrait",
+    "tools": ["React", "TypeScript", "Tailwind CSS", "Zustand", "Zod", "Axios", "React Router", "Vite", "PostCSS", "Autoprefixer", "ESLint", "Netlify"],
+    "desc": "Un explorador del universo Marvel para buscar cómics, navegar por héroes y series y consultar el detalle de cada número.",
+    "visualCaption": "Marvel Comics Explorer · Vista móvil de la aplicación",
+    "caseStudy": [
+      {
+        "title": "El problema",
+        "description": "Explorar un catálogo extenso de cómics requiere encontrar títulos y recorrer series sin perderse entre resultados."
+      },
+      {
+        "title": "Mi implementación",
+        "description": "Construí un catálogo con filtros por héroe y serie, paginación, búsqueda por título y fichas con portada, descripción y creadores. React Router organiza la navegación y Zustand centraliza resultados, filtros y estados de carga y error."
+      },
+      {
+        "title": "Una decisión clave",
+        "description": "Separé las consultas HTTP en un servicio con Axios y validé las respuestas de Marvel Metadata API con esquemas Zod antes de incorporarlas al estado. TypeScript define los tipos que utiliza la interfaz."
+      }
+    ]
   }
 ]

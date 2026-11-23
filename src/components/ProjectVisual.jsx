@@ -16,7 +16,7 @@ export default function ProjectVisual({ project }) {
   return (
     <div ref={target} className="project-visual">
       <m.a
-        className="project-image"
+        className={`project-image${project.previewFormat === "portrait" ? " project-image-portrait" : ""}`}
         href={project.link[1]}
         target="_blank"
         rel="noopener noreferrer"

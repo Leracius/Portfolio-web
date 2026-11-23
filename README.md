@@ -47,6 +47,16 @@ Visor e inspector 3D para modelos GLB y glTF. Incluye carga local por arrastrar 
 
 [Probar GLB Viewer Pro](https://glb-viewer-wheat.vercel.app/) · [Ver repositorio](https://github.com/Leracius/GLB-viewer)
 
+### Marvel Comics Explorer
+
+Explorador de cómics con búsqueda por título, filtros por héroe y serie, paginación y fichas con portada, descripción y creadores. Las consultas a Marvel Metadata API se realizan con Axios y sus respuestas se validan con Zod; Zustand centraliza los resultados y los estados de carga y error.
+
+![Vista móvil de Marvel Comics Explorer](public/marvel-comics.jpg)
+
+**Tecnologías:** React · TypeScript · Tailwind CSS · Zustand · Zod · Axios · React Router · Vite · PostCSS · Autoprefixer · ESLint · Netlify.
+
+[Probar Marvel Comics Explorer](https://astounding-faloodeh-adf338.netlify.app/) · [Ver repositorio](https://github.com/Leracius/marvel-comics)
+
 ## Tecnologías del portfolio
 
 Este repositorio utiliza **React**, **Vite**, **Motion** y **CSS**, con componentes escritos en JavaScript. El contenido de los proyectos está separado en un archivo JSON para facilitar su actualización.
